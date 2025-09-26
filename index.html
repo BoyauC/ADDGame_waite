@@ -12,18 +12,28 @@
     h1 {
       margin-top: 50px;
     }
-    .button-container {
+    .button-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: 30px;
+      gap: 20px;
+    }
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
     .game-button {
       padding: 15px 30px;
-      margin: 10px;
+      margin: 0;
       font-size: 18px;
       cursor: pointer;
       background-color: #4CAF50;
       color: white;
       border: none;
       border-radius: 8px;
+      transition: background-color 0.2s;
     }
     .game-button:hover {
       background-color: #45a049;
@@ -38,13 +48,18 @@
 </head>
 <body>
   <h1>歡迎來到遊戲選單</h1>
-  <div class="button-container">
-    <button class="game-button" onclick="location.href='Alpaca_PClimit-main/index.html'">🎮 最終版有提示語(左右羊駝)</button>
-    <button class="game-button" onclick="location.href='Block_PClimit-main/index.html'">🧠 最終版有提示語(方塊上下)</button>
-    <button class="game-button" onclick="location.href='FruitRunner_PClimit-main/index.html'">🕹️ 最終版有提示語(水果甩)</button>
-    <button class="game-button" onclick="location.href='Frint_run20250925/index.html'">🧪 實驗中-水果跑</button>
-    <button class="game-button" onclick="location.href='Fruit-s_size20250925/index.html'">🧪 實驗中-水果跑小檔案2</button>
-    <button class="game-button" onclick="location.href='    '">🧪 實驗中選項3</button>
+  <div class="button-grid">
+    <div class="button-row">
+      <button class="game-button" onclick="location.href='Alpaca_PClimit-main/index.html'">🎮 最終版有提示語(左右羊駝)</button>
+      <button class="game-button" onclick="location.href='Block_PClimit-main/index.html'">🧠 最終版有提示語(方塊上下)</button>
+      <button class="game-button" onclick="location.href='FruitRunner_PClimit-main/index.html'">🕹️ 最終版有提示語(水果甩)</button>
+    </div>
+    <div class="button-row">
+      <button class="game-button experimental" onclick="location.href='Frint_run20250925/index.html'">🧪 NAS左右羊駝打包檔</button>
+      <button class="game-button experimental" onclick="location.href='Fruit-s_size20250925/index.html'">🧪 NAS-方塊上下包檔</button>
+      <button class="game-button experimental" onclick="location.href='    '">🧪 NAS-水果甩打包檔</button>
+      <button class="game-button experimental" onclick="location.href='    '">🧪 實驗中選項4</button>
+    </div>
   </div>
 </body>
 </html>
